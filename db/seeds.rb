@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(username: 'Fred', score: "100")
+User.create(username: 'Bob', score: "20")
+
+Question.create(question: 'What is your favorite color?', answera: "blue", answerb: "yellow", answerc: "green", correctanswer: "a")
