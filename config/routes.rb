@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :comments
   resources :questions
   resources :users
   get '/test', to: 'application#test'

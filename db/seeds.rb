@@ -9,5 +9,7 @@
 User.create(username: 'Fred', score: "100")
 User.create(username: 'Bob', score: "20")
 
+Comment.create(name: "one", comment: "hello", user_id: "3")
+
 Question.create(question: 'What is your favorite color?', answera: "blue", answerb: "yellow", answerc: "green", correctanswer: "a")
 Question.create(question: 'What is your favorite movie?', answera: "gump", answerb: "shawshank", answerc: "it", correctanswer: "b")

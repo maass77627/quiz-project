@@ -13,10 +13,16 @@ class UsersController < ApplicationController
                 render :json => { :errors => @user.errors }, status: 400
             end
         end
+
+        def show
+            user = User.find_by(id: params[:id])
+            render json: user
+
+        end
     
         private
 
     def user_params
-        params.require(:user).permit(:username)
+        params.require(:user).permit(:username, :score)
     end
 end
