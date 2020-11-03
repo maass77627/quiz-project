@@ -14,6 +14,12 @@ class UsersController < ApplicationController
             end
         end
 
+        def update
+            user = User.find(params[:id])
+            user.update(score: params[:score])
+            render json: user
+        end
+
         def show
             user = User.find_by(id: params[:id])
             render json: user
@@ -22,7 +28,7 @@ class UsersController < ApplicationController
     
         private
 
-    def user_params
+        def user_params
         params.require(:user).permit(:username, :score)
-    end
+        end
 end
